@@ -42,5 +42,10 @@ A professional Flask-based web application for real-time Bitcoin trading signals
 - Integrate WebSockets for real-time updates (e.g., via Flask-SocketIO).
 - Add user authentication for personalized signals.
 - Backtesting module for historical data analysis.
+- 
+<img width="1060" height="318" alt="c2" src="https://github.com/user-attachments/assets/27bfaf98-6fd8-46a7-bf14-5ea4b508b711" />
+
+<img width="1054" height="526" alt="c3" src="https://github.com/user-attachments/assets/f600803e-ab02-402a-bba4-1f3a283ed73f" />
+
 
 Built with ❤️ by Zubair. For issues, check console logs or extend `utils/signals.py`. Contributions welcome!
