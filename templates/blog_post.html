@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ post.title }} - Crypto Signal Pro</title>
+    <meta name="description" content="{{ post.excerpt }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="canonical"
+      href="{{ url_for('blog_post', slug=post.slug, _external=True) }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <a
+            href="{{ url_for('index') }}"
+            style="color: #00ffff; text-decoration: none"
+            >🚀 Crypto Signal Pro</a
+          >
+        </h1>
+        <p class="sub">
+          <a
+            href="{{ url_for('blogs') }}"
+            style="color: #9ca3af; text-decoration: none"
+            >← Back to Blogs</a
+          >
+        </p>
+      </header>
+
+      <article class="post">
+        <h1 style="color: #00ffff">{{ post.title }}</h1>
+        <small style="color: #9ca3af"
+          >By {{ post.author }} | {{ post.formatted_date }}</small
+        >
+        <div class="post-content">{{ post.content | safe }}</div>
+      </article>
+
+      <footer>
+        <p>
+          Powered by <span>CoinGecko API</span> | Designed by
+          <span class="me">Zubair Ahmed</span>
+        </p>
+      </footer>
+    </div>
+
+    <style>
+      .blog-card {
+        background: #111827;
+        border: 1px solid #00ffff33;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+      }
+      .blog-card:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+      }
+      .blog-card h3 {
+        margin: 0 0 10px 0;
+      }
+      .blog-card .excerpt {
+        color: #9ca3af;
+        margin: 0 0 10px 0;
+      }
+      .post {
+        background: #111827;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+      }
+      .post-content {
+        line-height: 1.6;
+        color: #e5e7eb;
+      }
+      .post-content h2,
+      .post-content h3 {
+        color: #00ffff;
+        margin-top: 25px;
+      }
+      .post-content ul,
+      .post-content ol {
+        padding-left: 20px;
+      }
+      .post-content p {
+        margin-bottom: 15px;
+      }
+    </style>
+  </body>
+</html>

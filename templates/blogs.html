@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs - Crypto Signal Pro</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📖 Crypto Blogs</h1>
+        <p class="sub">
+          AI-Powered Insights |
+          <a
+            href="{{ url_for('index') }}"
+            style="color: #00ffff; text-decoration: none"
+            >← Back to Dashboard</a
+          >
+        </p>
+      </header>
+
+      <section class="blogs">
+        <div class="blogs-grid">
+          {% for post in blogs %}
+          <div class="blog-card">
+            <h3>{{ post.title }}</h3>
+            <p class="excerpt">{{ post.excerpt }}</p>
+            <p class="meta">By {{ post.author }} | {{ post.date }}</p>
+            <a
+              href="{{ url_for('blog_post', slug=post.slug) }}"
+              class="read-more"
+              >Read More →</a
+            >
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          Powered by CoinGecko API | Designed by
+          <span class="me">Zubair Ahmed</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

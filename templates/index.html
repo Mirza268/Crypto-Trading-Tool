@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Signal Pro</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/bitcoin.jpeg') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🚀 Crypto Signal Pro</h1>
+        <p class="sub">
+          AI-Powered Real-Time Insights |
+          <a
+            href="{{ url_for('blogs') }}"
+            style="color: #00ffff; text-decoration: none"
+            >Read Blogs</a
+          >
+        </p>
+      </header>
+
+      <section class="stats">
+        <div class="card neon">
+          <h2>💰 Current Price</h2>
+          <p id="price" class="value">$0.00</p>
+        </div>
+        <div class="card neon">
+          <h2>📊 Signal</h2>
+          <p id="signal" class="value">Loading...</p>
+        </div>
+        <div class="card mini">
+          <h2>🕒 Last Updated</h2>
+          <p id="lastUpdated" class="small">—</p>
+        </div>
+      </section>
+
+      <section class="chart">
+        <h2>📈 Bitcoin Price Chart (Last 24h)</h2>
+        <canvas id="priceChart"></canvas>
+      </section>
+
+      <footer>
+        <p>
+          Powered by <span>CoinGecko API</span> | Designed by
+          <span class="me">Zubair Ahmed</span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
